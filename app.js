@@ -29,7 +29,9 @@ app.use('/api/bookings/', bookingRoutes);
 
 
 
-
+app.use('/', (req, res) => {
+  res.status(200).send({message: 'Car Booking API'});
+});
 
 
 app.use((error, req, res, next) => {
