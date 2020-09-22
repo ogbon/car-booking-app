@@ -18,7 +18,7 @@ module.exports = (req, res, next) => {
       let decodedToken;
 
       try {
-          decodedToken = jwt.verify(token, 'supersupersecret');
+          decodedToken = jwt.verify(token, `${process.env.SECRET_PASS}`);
       }
       catch(err) {
         err.statusCode = 500;

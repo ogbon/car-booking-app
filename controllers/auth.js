@@ -24,7 +24,7 @@ exports.login  = (req, res, next) => {
                            email: loadedUser.email,
                            userId: loadedUser.id
                          },
-                         'supersupersecret',
+                         `${process.env.SECRET_PASS}`,
                          {
                            expiresIn: '1h'  
                          }
